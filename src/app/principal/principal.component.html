@@ -1,20 +1,22 @@
-<div class="container p-2">
-    <h2>ENCUESTA PARA ASIGNAR LA REUNION POR FIESTAS PATRIAS</h2>
-    <P class="text-end">Atencion Societaria</P>
-    <mat-tab-group animationDuration="0ms" [(selectedIndex)]="Next">
-        <mat-tab label="preg01">
-            <app-preg01></app-preg01>
-        </mat-tab>
-        <mat-tab label="preg02">
-            <app-preg02></app-preg02>
-        </mat-tab>
-        <mat-tab label="preg03">
-            <app-preg03></app-preg03>
-        </mat-tab>
-        <mat-tab label="preg04">
-            <app-preg04></app-preg04>
-        </mat-tab>
-    </mat-tab-group>
+<div class="container py-5">
+    <div class="row justify-content-center ">
+        <div class="col-sm-6 border rounded-2 pb-3">
+            <h4 class="text-center">ENCUESTA PARA ASIGNAR LA REUNION POR FIESTAS PATRIAS</h4>
+            <P class="text-end">Atencion Societaria</P>
+            <mat-tab-group animationDuration="0ms" [(selectedIndex)]="Next">
+                <mat-tab label="preg01">
+                    <app-preg01></app-preg01>
+                </mat-tab>
+                <mat-tab label="preg02">
+                    <app-preg02></app-preg02>
+                </mat-tab>
+                <mat-tab label="preg03">
+                    <app-preg03></app-preg03>
+                </mat-tab>
+                <mat-tab label="preg04">
+                    <app-preg04></app-preg04>
+                </mat-tab>
+            </mat-tab-group>
+        </div>
+    </div>
 </div>
-<hr> 
-<app-footer></app-footer>

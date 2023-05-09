@@ -19,8 +19,8 @@ import { EncuestaComponent } from './components/encuesta/encuesta.component';
 
 
 const appRoutes: Routes = [
-  {path: 'appencuesta', component: EncuestaComponent},
-  {path: '', component: HomeComponent,pathMatch:"full"},
+  // {path: 'appencuesta', component: EncuestaComponent},
+  // {path: '', component: HomeComponent,pathMatch:"full"},
   {path: 'principal', component: PrincipalComponent},
   {path: 'preg01', component: Preg01Component},
   {path: 'preg02', component: Preg02Component},

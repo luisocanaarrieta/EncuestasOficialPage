@@ -8,41 +8,46 @@ import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class EncuestaComponent implements OnInit {
   
-  form: FormGroup | any
+  //variable form de tipo any que puede ser cualquier tipo de variable de la clase formgroup 
+  formd: FormGroup | any
 
+  //Metodo a llamar cuando se crea un abjeto
   constructor (
     private fb: FormBuilder
   ) {}
 
+  //llamado a la funcion setForm() 
   ngOnInit() {
     this.setForm()
   }
 
+  //Se define la variable 'formd' con 03 controles, valor inicial null 
   setForm() {
-    this.form = this.fb.group({
+    this.formd = this.fb.group({
       title: [null, [Validators.required]],
       description: [null, [Validators.required]],
       questions: this.fb.array([])
     })
   }
 
+  //
   async create() {
-    this.form.markAllAsTouched()
+    this.formd.markAllAsTouched()
 
-    if (this.form.invalid) {
+    if (this.formd.invalid) {
       return alert('Ingresa los datos como se indica.')
     }
 
     alert('Encuesta creada exitosamente.')
-
-    console.log('Data', this.form.value)
-
+    //registro de datos
+    console.log('Data', this.formd.value)
+    //reseteo del contenido
     this.setForm()
   }
 
-  addQuestion() {
-    const questions: FormArray = this.form.get('questions') as FormArray
-
+  addPreg() {
+    //declara variable questioons de tipo arreglo
+    const questions: FormArray = this.formd.get('questions') as FormArray
     questions.push(this.fb.group({
       title: [null, [Validators.required]],
       type: [1, [Validators.required]],
@@ -160,13 +165,13 @@ export class EncuestaComponent implements OnInit {
   }
 
   removeQuestion(qI: number) {
-    const questions: FormArray = this.form.get('questions') as FormArray
+    const questions: FormArray = this.formd.get('questions') as FormArray
 
     questions.removeAt(qI)
   }
 
   addOption(qI: number) {
-    const questions: FormArray = this.form.get('questions') as FormArray
+    const questions: FormArray = this.formd.get('questions') as FormArray
     const options: FormArray = questions.controls[qI].get('options') as FormArray
 
     options.push(this.fb.group({
@@ -175,7 +180,7 @@ export class EncuestaComponent implements OnInit {
   }
 
   removeOption(qI: number, oI: number) {
-    const questions: FormArray = this.form.get('questions') as FormArray
+    const questions: FormArray = this.formd.get('questions') as FormArray
     const options: FormArray = questions.controls[qI].get('options') as FormArray
 
     options.removeAt(oI)
