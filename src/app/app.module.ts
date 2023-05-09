@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatTabsModule} from '@angular/material/tabs';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { MatIconModule } from '@angular/material/icon';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -19,8 +20,8 @@ import { EncuestaComponent } from './components/encuesta/encuesta.component';
 
 
 const appRoutes: Routes = [
-  // {path: 'appencuesta', component: EncuestaComponent},
-  // {path: '', component: HomeComponent,pathMatch:"full"},
+  //{path: 'appencuesta', component: EncuestaComponent},
+  //{path: '', component: HomeComponent,pathMatch:"full"},
   {path: 'principal', component: PrincipalComponent},
   {path: 'preg01', component: Preg01Component},
   {path: 'preg02', component: Preg02Component},
@@ -51,7 +52,8 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     MatTabsModule,
     BrowserAnimationsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

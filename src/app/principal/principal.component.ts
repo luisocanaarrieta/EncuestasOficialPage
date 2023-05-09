@@ -7,8 +7,11 @@ import { Component } from '@angular/core';
 })
 export class PrincipalComponent {
   Next=0;
-
   Siguiente(){
     this.Next+=1;
+  }
+
+  Retroceder(){
+    this.Next-=1;
   }
 }

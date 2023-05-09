@@ -22,7 +22,12 @@
             </div>
         </div>
     </div>
-    <div class="text-end">
-        <button type="button" class="btn btn-primary active">Siguiente</button>
+    <div class="row">
+        <div class="col-sm-6 text-start">
+            <button type="button" class="btn btn-primary active" (click)="retroceder()">Atras</button>
+        </div>
+        <div class="col-sm-6 text-end">
+            <button type="button" class="btn btn-primary active" (click)="siguiente()">Siguiente</button>
+        </div>
     </div>
 </div>

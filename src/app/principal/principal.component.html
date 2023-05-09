@@ -1,19 +1,32 @@
 <div class="container py-5">
     <div class="row justify-content-center ">
         <div class="col-sm-6 border rounded-2 pb-3">
-            <h4 class="text-center">ENCUESTA PARA ASIGNAR LA REUNION POR FIESTAS PATRIAS</h4>
+            <h4 class="text-center fontTitle">ENCUESTA PARA ASIGNAR LA REUNION POR FIESTAS PATRIAS</h4>
             <P class="text-end">Atencion Societaria</P>
-            <mat-tab-group animationDuration="0ms" [(selectedIndex)]="Next">
-                <mat-tab label="preg01">
+            
+            <mat-tab-group animationDuration="900ms" [(selectedIndex)]="Next" >
+                <mat-tab>
+                    <ng-template mat-tab-label>
+                      <mat-icon>looks_one</mat-icon>
+                    </ng-template>
                     <app-preg01></app-preg01>
-                </mat-tab>
-                <mat-tab label="preg02">
+                  </mat-tab>
+                <mat-tab>
+                    <ng-template mat-tab-label>
+                        <mat-icon>looks_two</mat-icon>
+                      </ng-template>
                     <app-preg02></app-preg02>
                 </mat-tab>
-                <mat-tab label="preg03">
+                <mat-tab>
+                    <ng-template mat-tab-label>
+                        <mat-icon>looks_3</mat-icon>
+                      </ng-template>
                     <app-preg03></app-preg03>
                 </mat-tab>
-                <mat-tab label="preg04">
+                <mat-tab>
+                    <ng-template mat-tab-label>
+                        <mat-icon>looks_4</mat-icon>
+                      </ng-template>
                     <app-preg04></app-preg04>
                 </mat-tab>
             </mat-tab-group>
