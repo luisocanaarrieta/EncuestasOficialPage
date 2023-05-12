@@ -3,8 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {MatTabsModule} from '@angular/material/tabs';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { MatTabsModule } from '@angular/material/tabs';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 
 import { AppComponent } from './app.component';
@@ -18,17 +18,14 @@ import { HomeComponent } from './components/home/home.component';
 import { PrincipalComponent } from './principal/principal.component';
 import { EncuestaComponent } from './components/encuesta/encuesta.component';
 
-
 const appRoutes: Routes = [
   //{path: 'appencuesta', component: EncuestaComponent},
   //{path: '', component: HomeComponent,pathMatch:"full"},
-  {path: 'principal', component: PrincipalComponent},
-  {path: 'preg01', component: Preg01Component},
-  {path: 'preg02', component: Preg02Component},
-  {path: 'preg03', component: Preg03Component},
-  {path: 'preg04', component: Preg04Component},
-  
-
+  { path: 'principal', component: PrincipalComponent },
+  { path: 'preg01', component: Preg01Component },
+  { path: 'preg02', component: Preg02Component },
+  { path: 'preg03', component: Preg03Component },
+  { path: 'preg04', component: Preg04Component },
 ];
 
 @NgModule({
@@ -42,8 +39,7 @@ const appRoutes: Routes = [
     Preg04Component,
     HomeComponent,
     PrincipalComponent,
-    EncuestaComponent
-    
+    EncuestaComponent,
   ],
   imports: [
     BrowserModule,
@@ -56,6 +52,6 @@ const appRoutes: Routes = [
     MatIconModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
